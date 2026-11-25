@@ -328,7 +328,7 @@ export default function CreateServices({ id }: { id: string }) {
         }));
     }
 
-    const onSocialMediaHandlePress = (type: "platform" | "handler", value: string, index: number) => { 
+    const onSocialMediaHandlePress = (type: "platform" | "handler", value: string, index: number) => {
         const clone: any = [...handles]
 
         if (type === "handler") {
@@ -354,9 +354,6 @@ export default function CreateServices({ id }: { id: string }) {
     }
 
     const clickHandler = () => { }
-
-    console.log(handles);
-
 
     return renderForm(
         <Flex w={"full"} h={"full"} >
@@ -399,7 +396,7 @@ export default function CreateServices({ id }: { id: string }) {
                                 onChange={(e) => {
                                     setName(capitalizeFLetter(e.target.value))
                                 }}
-                                h={"44px"} 
+                                h={"44px"}
                                 borderWidth={"1px"}
                                 borderColor={borderColor}
                                 rounded={"full"}
@@ -425,12 +422,12 @@ export default function CreateServices({ id }: { id: string }) {
                     </Flex>
                     <Flex flexDir={"column"} w={"full"} gap={"2"} >
                         <Text fontWeight={"400"} fontSize={"14px"} >Service Description <sup style={{ color: 'red' }}>*</sup></Text>
-                        <Textarea 
-                                rounded={"16px"} bgColor={mainBackgroundColor} value={description} onChange={(e) => {
-                            if (description.length < 300) {
-                                setDescription(capitalizeFLetter(e.target.value))
-                            }
-                        }} h={"100px"} borderWidth={"1px"} borderColor={borderColor} />
+                        <Textarea
+                            rounded={"16px"} bgColor={mainBackgroundColor} value={description} onChange={(e) => {
+                                if (description.length < 300) {
+                                    setDescription(capitalizeFLetter(e.target.value))
+                                }
+                            }} h={"100px"} borderWidth={"1px"} borderColor={borderColor} />
                         <Text>{description.length}/300</Text>
                     </Flex>
                     {/* {hasFixedPrice && (
@@ -457,7 +454,7 @@ export default function CreateServices({ id }: { id: string }) {
                             onFocus={(e) => e.target.addEventListener("wheel", function (e) { e.preventDefault() }, { passive: false })}
                             h={"44px"}
                             borderWidth={"1px"}
-                            borderColor={borderColor} 
+                            borderColor={borderColor}
                             placeholder='₦ 232,435'
                         />
                     </Flex>
@@ -523,7 +520,7 @@ export default function CreateServices({ id }: { id: string }) {
                                     <Text fontSize={"sm"} >Social Media URL</Text>
                                     <Flex gap={"2"} alignItems={"center"} >
                                         <Input
-                                        rounded={"full"}
+                                            rounded={"full"}
                                             bgColor={mainBackgroundColor}
                                             h={"44px"}
                                             value={item?.socialMediaHandle}
